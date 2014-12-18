@@ -23,7 +23,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.name = "mcxess-freeswitch"
   end
 
-  config.vm.provider "virtualbox" do |vm|
+  config.vm.provider "vmware_fusion" do |vm|
     vm.vmx["memsize"] = "2048"
     vm.name = "mcxess-freeswitch"
   end
