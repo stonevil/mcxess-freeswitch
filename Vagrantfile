@@ -53,8 +53,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   config.vm.provision :chef_solo do |chef|
     chef.json = {
-      resolver: {
-        nameservers: '8.8.8.8'
+      freeswitch: {
+        user: 'freeswitch',
+        install_method: "package"
       }
     }
 
